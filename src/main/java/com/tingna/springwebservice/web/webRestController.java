@@ -1,12 +1,26 @@
 package com.tingna.springwebservice.web;
 
+import com.tingna.springwebservice.web.dto.posts.PostsSaveRequestDto;
+import com.tingna.springwebservice.web.service.PostsService;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController //@ResponseBody를 모든 메소드에 적용 시켜줌
+@RestController
+@AllArgsConstructor
 public class webRestController {
-	@GetMapping("/hello")
-	public String hello() { //hello 메소드의 결과는 "helloWorld"라는 문자열을 JSON형태로 반환
-		return "HelloWorld";
-	}
+
+    private PostsService postsService;
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "HelloWorld";
+    }
+
+    @PostMapping("/posts")
+    public Long savePosts(@RequestBody PostsSaveRequestDto dto){
+        return postsService.save(dto);
+    }
 }
