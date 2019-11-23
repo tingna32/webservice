@@ -12,5 +12,4 @@ class WebserviceApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
