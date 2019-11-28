@@ -17,5 +17,5 @@ public class WebController {
     public String main(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
         return "main"; //src/main/resources/templates/main.hbs로 전환되어 View Resolver가 처리
-    }
+    }					//ViewResolver는 URL 요청의 결과를 전달 할 타입과 값을 지정하는 관리자 격
 }
