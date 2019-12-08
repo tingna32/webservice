@@ -5,6 +5,9 @@ build/
 !**/src/main/**
 !**/src/test/**
 
+#외부환경설정
+C:/Users/LG/app/config/springboot-webservice/real-application.yml
+
 ### STS ###
 .apt_generated
 .classpath
