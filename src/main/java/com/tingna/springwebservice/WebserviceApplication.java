@@ -10,7 +10,8 @@ public class WebserviceApplication {
 
 	public static final String APPLICATION_LOCATIONS = "spring.config.location="
 			+ "classpath:application.yml,"
-			+ "C:/Users/LG/app/config/springboot-webservice/real-application.yml";
+			+ "C:/Users/LG/app/config/springboot-webservice/real-application.yml"; //외부환경설정
+	
 
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(WebserviceApplication.class)
